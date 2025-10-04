@@ -2,6 +2,22 @@
 
 {% block conteudo %}
 
-    <h1>Essa é a minha página inicial</h1>
+    <div class="container">
+        <div class="row justify-content-center mt-5">
+            <div class="col-6">
+                <h1>Login</h1>
+                <form method="POST" action="{{url_for('index')}}">
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email" name="email" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="password" class="form-label">Senha</label>
+                        <input type="password" class="form-control" id="password" name="senha" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Entrar</button>
+            </div>
+        </div>
+    </div>
 
 {% endblock %}
